@@ -20,9 +20,10 @@ import javax.servlet.http.HttpServletResponse;
  * @author User
  */
 public class BalanceServlet extends HttpServlet {
+  
     @EJB
     private AccountBeanLocal accountBean;
-
+//prueba
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
