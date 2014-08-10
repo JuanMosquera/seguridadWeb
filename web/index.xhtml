@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h2>Menu Banco UdeA </h2>
+        <a href="BalanceServlet">Ver Saldo</a>
+        <p/>
+        <form action="DepositServlet" method="GET">
+            
+            Ingrese Monto: <input type="text" name="amount" />
+            <input type="submit" value="Ingresar Deposito" />
+        </form>
+        <p/>
+        <a href="CloseServlet">Cerrar Cuenta</a>
+        <br/>
+        <a href="LogoutServlet">Log Out</a>
+    </h:body>
+</html>
+
