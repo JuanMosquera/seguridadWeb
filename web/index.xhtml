@@ -13,11 +13,19 @@
             
             Ingrese Monto: <input type="text" name="amount" />
             <input type="submit" value="Ingresar Deposito" />
+       
         </form>
         <p/>
         <a href="CloseServlet">Cerrar Cuenta</a>
         <br/>
         <a href="LogoutServlet">Log Out</a>
-    </h:body>
+        <p/>
+        <a href="c.jsp">Area</a>
+        <p/>
+        
+         <h:form>
+            <h:commandLink action="#{logoutBean.logout}" value="Logout..." />
+        </h:form>
+           </h:body>
 </html>
 

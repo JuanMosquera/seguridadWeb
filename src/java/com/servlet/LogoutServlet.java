@@ -31,7 +31,7 @@ public class LogoutServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         request.getSession().invalidate();
-        response.sendRedirect("/SeguridadWeb/faces/login.xhtml");
+        response.sendRedirect("/../../login.xhtml");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

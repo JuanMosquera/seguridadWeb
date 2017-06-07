@@ -69,6 +69,10 @@
             <description/>
             <role-name>users</role-name>
         </auth-constraint>
+        <user-data-constraint>
+            <description/>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
     </security-constraint>
     <security-constraint>
         <display-name>Balance</display-name>
@@ -84,6 +88,10 @@
             <role-name>users</role-name>
             <role-name>manager</role-name>
         </auth-constraint>
+        <user-data-constraint>
+            <description/>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
     </security-constraint>
     <security-constraint>
         <display-name>Close</display-name>
@@ -97,6 +105,28 @@
             <description/>
             <role-name>admins</role-name>
         </auth-constraint>
+        <user-data-constraint>
+            <description/>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+    <security-constraint>
+        <display-name>CalculadoraConstraint</display-name>
+        <web-resource-collection>
+            <web-resource-name>CalculadoraService</web-resource-name>
+            <description/>
+            <url-pattern>/webresources/calculadora/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description/>
+            <role-name>users</role-name>
+            <role-name>admins</role-name>
+            <role-name>manager</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <description/>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
     </security-constraint>
     <login-config>
         <auth-method>FORM</auth-method>

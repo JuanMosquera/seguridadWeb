@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>
+          var webresources="<%=getServletContext().getContextPath()%>/webresources";
+          var calculadoraRest=webresource+"/calculadora";
+          var factorialPath=calculadoraRest+"/factorial";
+          function init(){
+            $("#factorialBtn").click(function(){
+             var vBase=$("#f_base").val();
+             var cAltura=$("#f_altura");
+             $.ajax(factorialPath,
+             {
+               data:{base:vBase,altura:vAltura};
+            success:function(resp){
+            $("#f_resultado").text("Resultado:"+resp);    
+            }   
+             });
+                
+            });  
+              
+          }
+        </script>
+    </h:head>
+    <h:body>
+        <h1>Calculo de Area</h1>
+        <form>
+            <fieldset>
+                <legend>Factorial</legend>
+                <label for="f_base">Base</label><input id="f_base" name="base" /><br/>
+                <label for="f_altura">Altura</label><input id="f_altura" name="altura" /><br/>
+                <button id="factorialBtn" type="button">Calcular</button>
+                <div id="f_resultado"></div>
+            </fieldset>
+        </form>
+    </h:body>
+    <script type="text/javascript>">
+        $(document).ready(init)
+    </script>
+</html>
+
